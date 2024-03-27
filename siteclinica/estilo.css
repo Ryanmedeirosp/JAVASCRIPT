@@ -1,0 +1,312 @@
+*{
+    margin: 0;
+}
+body{
+    background-color:#d3d3d3 ;
+    overflow-x: hidden;
+}
+#logo{
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 60px;
+}
+#divLogo{
+    display: flex;
+    justify-content: center;
+    border: 3px solid black;
+    width: 100%;
+    height: 120px;
+}
+#nome{
+    margin-top: 20px;
+    font-size: 50px;
+    font-family: monospace;
+}
+#botoes{
+    background-color: #f5f5dc;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+}
+.btn{
+    font-size: 30px;
+    font-family: Roboto;
+    margin-top: 5px;
+    margin-left: 3px;
+    margin-right: 50px;
+    color: #444647;
+    text-decoration: none;
+}
+.btn:hover{
+    text-decoration: underline;
+    color: black;
+    cursor: pointer;
+}
+#apresentacao{
+    display: flex;
+    align-items:   center;
+    width: 100%;
+    height: 1200px;
+    border: 3px solid black;
+    flex-direction: column;
+}
+.img{
+    margin: 5px;
+    width: 55px;
+    height: 40px;
+}
+#redes{
+    margin: 10px;
+    position: relative;
+    left: 320px;
+    display: flex;
+    width: 100px;
+    height: 40px;
+}
+#links{
+    display: flex;
+}
+#logoLink{
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 30px;
+    width: 100px;
+    height: 100px;
+    border-radius: 60px;
+}
+footer{
+    background-color:  #f5f5dc ;
+    display: flex;
+}
+.rodape{
+    font-family: Roboto;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    width: 600px;
+    height: 150px;
+    margin: 10px;
+}
+p{
+    font-family: Roboto;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.btnrodape{
+    margin-top: 5px;
+    font-size: 15px;
+    font-family: Roboto;
+    color: black;
+    text-decoration: none;
+}
+.btnrodape:hover{
+    text-decoration: underline;
+    color: #444647;
+    cursor: pointer;
+}
+.text1{
+    display: flex;
+    margin-top: 20px;
+    width: 1200px;
+    height: 350px;
+    background-color:  rgb(238, 237, 235);
+    border: 2px solid black;
+}
+.lorem{
+    font-size: 20px;
+    width: 1000px;
+    margin: 40px;
+    margin-right: 100px;
+}
+.ipsum{
+    font-size: 20px;
+    width: 700px;
+    margin: 40px;
+    margin-left: 100px;
+
+}
+#relogio{
+    font-size: 25px;
+    margin-top: 20px;
+    right: 270px;
+    position: relative;
+    width: 90px;
+    height: 30px;
+}
+label{
+    font-size: 30px;
+}
+#entradaProduto{
+    width: 100%;
+    height: 1500px;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    justify-content: center;
+}
+.linhaProduto{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    background-color: rgb(238, 237, 235);
+    margin: 30px;
+    border: 3px solid black;
+    height: 400px;
+
+}
+.produtoLocal{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    background-color: rgb(211, 211, 211);
+    width: 350px;
+    margin: 10px;
+    border: 3px solid black;
+    height: 300px;
+}
+.imgProduto{
+    width: 250px;
+    margin: 10px;
+    height: 220px;
+}
+#divOculta{
+    background-color: rgb(0,0,0,0.8);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+#divProduto{
+    padding: 20px;
+    align-items: center;
+    background-color: white;
+    width: 800px;
+    height: 500px;
+    border: 3px solid black;
+}
+.imgProduto:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+#alinhar{
+    display: flex;
+    justify-content: center;
+    margin-top: 180px;
+    
+}
+#close{
+    color: red;
+    float: right;
+    font-size: 90px ;
+    font-weight: bold ;
+    margin-left: 40px;
+
+}
+#close:hover, #close:focus{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+#tituloMain{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#apresentacaoSobre{
+    display: flex;
+    align-items:   center;
+    width: 100%;
+    height: 590px;
+    border: 3px solid black;
+    flex-direction: column;
+}
+#mvv{
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    width: 1100px;
+    height: 490px;
+}
+.mission{
+    margin: 15px;
+    width: 900px;
+    height: 130px;
+    background-color: rgb(240, 240, 240);
+    border: 3px solid black;
+}
+.tituloMission{
+    margin: 5px;
+}
+.pMission{
+    margin: 10px;
+    font-size: 20px;
+}
+#apresentacaoContato{
+    width: 100%;
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 598px;
+}
+#divForm{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 600px;
+    border: 3px solid black;
+    border-radius: 40px;
+    height:450px ;
+}
+form{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+iframe{
+    border-radius: 40px;
+}
+.inputForm{
+    margin: 5px;
+    height: 20px;
+} 
+.pForm{
+    margin: 5px;
+    font-size: 25px;
+}
+#buttonForm{
+    flex-direction: column;
+    top: 120px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+#btnForm{
+    position: fixed;
+    width: 200px;
+    height: 40px;
+    font-size: 30px;
+}
+#btnForm:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+#erro{
+    visibility: hidden;
+}
+span{
+    font-weight: bold;
+    bottom: 90px;
+    position: relative;
+    margin: 20px;
+    font-size: 30px;
+}

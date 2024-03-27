@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js"defer></script>
+    <title>Agenda de contato</title>
+</head>
+<body>
+    <div id="agenda">
+        <div id="titulo">
+            <h1>AGENDA DE CONTATOS</h1>
+        </div>
+        
+        <div id="botoes">
+            <button id="criarContato">Novo Contato</button>
+        </div>
+        <div id="table">
+            <table>
+                <thead>
+                    <td>
+                        Imagem
+                    </td>
+                    <td>
+                        Nome
+                    </td>
+                    <td>
+                        Email
+                    </td>
+                    <td>
+                        Telefone
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+
+                    </td>
+                </thead>
+                <tbody id="entradaLinha">
+                  
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="contato">
+       <div id="form">
+            <h1>NOVO CONTATO</h1>
+            <br>
+            Nome:<input id="nome" type="text" required>
+            <br>
+            Email:<input id="Email" type="email" required>
+            <br>
+            Telefone:<input id="Telefone" type="number" required>
+            <br>
+            <input id="Imagem" type="file" name="arquivos" accept="image/png, image/jpeg"  multiple /> 
+            <div>
+                <button type="submit" id="novoContatoSalvar">Salvar</button>
+                <button type="submit" id="back">voltar</button>
+            </div>
+            
+       </div>
+            
+        
+    </div>
+</body>
+</html>

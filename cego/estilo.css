@@ -1,0 +1,37 @@
+body{
+    display: flex;
+}
+#imgEntrada{
+    margin: 20px;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    height: 650px;
+    overflow-y: auto;
+    width: 300px;
+}
+#imgEntrada img{
+    width: 250px;
+    height: 200px;
+    padding: 10px;
+}
+
+#imgSaida img{
+    display: flex;
+    width: 800px;
+    height: 600px;
+    transition: opacity 500ms ease-in-out;
+    margin-left: 130px;
+    margin-top: 40px;
+    border: solid lightgreen 7px;
+}
+#imgSaida button{
+    margin-top: 20px;
+}
+#Voltar{
+    margin-left: 440px;
+    margin-right: 20px;
+}
+#imgEntrada img:hover{
+    cursor:pointer; 
+}

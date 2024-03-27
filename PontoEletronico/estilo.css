@@ -1,0 +1,49 @@
+body{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    
+}
+#table{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+h1{
+    font-size: 50px;
+}
+table{
+    border-collapse: collapse;
+}
+td{
+    width: 150px;
+    border: 2px solid black;
+    font-size: 30px;
+    padding: 10px;
+}
+input,select{
+    height: 30px;
+    width: 200px;
+}
+textarea{
+    width: 200px;
+    height: 200px;
+}
+button{
+    height: 30px;
+    width: 180px;
+}
+a{
+    font-size: large;
+    font-family: Roboto;
+    margin-top: 20px;
+    margin-left: 7px;
+    margin-right: 30px;
+    color: black;
+    text-decoration: none;
+   
+}
+a:hover{
+    text-decoration: underline;
+    color: #6c6f72;
+}

@@ -1,0 +1,31 @@
+
+h1{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+div{
+    display: flex;
+    justify-content: center;
+}
+#texto{
+    width: 500px;
+    height: 400px;
+    margin-top: 20px;
+}
+#diventrada{
+    font-size: 30px;
+}
+#crt{
+    font-size: 25px;
+}
+p{
+    font-size: 30px; 
+}
+#mensagem{
+    display: flex;
+    justify-content: left;
+    white-space: nowrap;
+    padding-left: 10px;
+    width: 500px;
+}

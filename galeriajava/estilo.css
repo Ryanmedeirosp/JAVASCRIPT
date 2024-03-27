@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+}
+body{
+    display: flex;
+    overflow:hidden;
+    background-color: rgb(225, 213, 236);
+}
+
+#imgentrada{
+    border: 5px solid black;
+    width: 300px;
+    padding: 10px;
+    margin:30px;
+    justify-content: center;
+    align-items: center;
+    height: 600px ;
+    overflow: auto;
+}
+
+#imgentrada img{
+    width: 250px;
+    height: 150px;
+    padding: 10px;
+    border: 3px solid black;
+    background-color: rgb(195, 160, 245);
+    border-radius: 20px;
+}
+#imgExibicao{
+    height: 600px;
+    width: 900px;
+    border: 2px solid;
+    border-radius: 20px;
+}
+
