@@ -27,6 +27,7 @@ setInterval(() => {
 
   setTimeout(() => {
     banner.style.opacity = 0.6
-  },1500);
+  },2000);
 
-}, 3000);
+}, 4000);
+

@@ -201,7 +201,7 @@ label{
     padding: 20px;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color: rgb(226, 190, 190);
     width: 800px;
     height: 500px;
     border: 3px solid black;
@@ -347,17 +347,15 @@ span{
     border: 3px solid black;
     flex-direction: row;
 }
-textarea{
-    padding: 40px;
+#selectPdt{
+    margin: 30px;
     font-size: 20px;
     border: 3px solid black;
     border-radius: 60px;
     position: relative;
-    top: -700px;
-    left: 600px;
-    height: 300px;
-    width: 550px;
-    resize: none;
+    width: 620px;
+    height: 900px;
+    background-color: white;
 }
 #pOculto{
     text-align: justify;
@@ -407,11 +405,50 @@ p{
     height:500px;
     position: absolute;
     opacity: 1;
-    transition: opacity 1500ms ease-in-out ;
+    transition: 2000ms ease-in-out ;
 }
 #slide{
     position: relative;
     width: 1800px;
     height: 500px;
     overflow: hidden;
+}
+#compre{
+    margin-top: 30px;
+    width: 170px;
+    height: 60px;
+    background-color: rgb(137, 221, 11);
+    border-radius: 50px;
+    border: none;
+    font-family: 'Orbitron';
+    font-size: 18px;
+    animation: pulsar 2s infinite;
+    box-shadow: rgba(255,255,255,1);
+    transition: 1s;
+}
+
+@keyframes pulsar {
+    0%{box-shadow: 0px 0px 0px 0px rgba(255,255,255,0.1);}
+
+    40%{box-shadow: 0px 0px 0px 40px rgba(255,255,255,0.3);}
+
+    80%{box-shadow: 0px 0px 0px 0px rgba(255,255,255,0.7);}
+
+    100%{box-shadow: 0px 0px 0px 0px rgba(255,255,255,0);}
+    
+}
+#compre:hover{
+    width: 250px;
+    height: 80px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+#ajustes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#preco{
+    margin: 20px;
+    font-family:  Century Gothic;
 }
