@@ -59,7 +59,7 @@ form.addEventListener("submit",(e)=>{
   }else{
     form.submit()
   }  
-    
+  
   
     span.style.visibility = "visible"
     setTimeout(()=>{span.style.visibility = "hidden"},2000)
@@ -87,6 +87,8 @@ function buscarCep(){
          else{
            span.textContent = "erro"
          }
+        let endereco = JSON.parse(req.response);
+        console.log(`${input[0].value},${input[1].value},${input[2].value},${endereco.city},${endereco.street},${endereco.neighborhood}`) 
       }
   }
 }
@@ -94,5 +96,3 @@ window.addEventListener("click", (e)=>{
   buscarCep();
 }) 
 
-
-  
