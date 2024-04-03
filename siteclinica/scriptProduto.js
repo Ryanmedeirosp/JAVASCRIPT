@@ -38,7 +38,7 @@ for (let index = 0; index < img.length; index++) {
     imgPdt.src = listaProduto[index]
     let precoPdt = document.createElement('td')
     linha.appendChild(precoPdt)
-    precoPdt = listaPreco[index]
+    precoPdt.textContent = listaPreco[index]
     let quantidade = document.createElement('td')
 
 
@@ -59,63 +59,4 @@ for (let index = 0; index < img.length; index++) {
     x.addEventListener("click",(e)=>{
       div.style.display ="none"
     })
-  
 }
-
-const input = document.querySelectorAll(".inputForm")
-const span = document.querySelector("#erro")
-const button = document.querySelector("#btnForm")
-const form = document.querySelector("#formContato")
-
-
-form.addEventListener("submit",(e)=>{
-  e.preventDefault()
-
-  if (input[0].name === "NOME" && input[0].value === ""){
-      span.textContent = "PREENCHA SEU NOME"
-
-  }else if(input[1].name === "EMAIL" && input[1].value === "" ){
-      span.textContent = "PREENCHA SEU EMAIL"
-
-  }else if(input[2].name === "TELEFONE" && input[2].value === "" ){
-    span.textContent = "PREENCHA SEU TELEFONE"
-  }else{
-    form.submit()
-  }  
-  
-  
-    span.style.visibility = "visible"
-    setTimeout(()=>{span.style.visibility = "hidden"},2000)
-    
-})
-
-function buscarCep(){
-  let cep = document.getElementById("cep").value;
-  if(cep !== ""){
-    let url = "https://brasilapi.com.br/api/cep/v1/" + cep;
-    let req = new XMLHttpRequest();
-    req.open("GET", url);
-    req.send();
-
-      req.onload = function(){
-        if(req.status === 200){
-          let endereco = JSON.parse(req.response);
-          document.getElementById("cidade").value = endereco.city;
-          document.getElementById("rua").value = endereco.street;
-          document.getElementById("bairro").value = endereco.neighborhood;
-        }
-        else if( req.status === 404){
-          span.textContent ="SEU CEP ESTÁ INVÁLIDO"
-        }
-         else{
-           span.textContent = "erro"
-         }
-        let endereco = JSON.parse(req.response);
-        console.log(`${input[0].value},${input[1].value},${input[2].value},${endereco.city},${endereco.street},${endereco.neighborhood}`) 
-      }
-  }
-}
-window.addEventListener("click", (e)=>{
-  buscarCep();
-}) 
-
