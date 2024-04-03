@@ -28,26 +28,6 @@ const compra = document.querySelector("#compre")
 const entradaCompra = document.querySelector("#entradaCompra")
 
 for (let index = 0; index < img.length; index++) {
-  compra.addEventListener("click",(e)=>{
-    let linha = document.createElement('tr')
-    entradaCompra.appendChild(linha)
-    let linhaImg = document.createElement('td')
-    linha.appendChild(linhaImg)
-    let imgPdt = document.createElement('img')
-    linhaImg.appendChild(imgPdt)
-    imgPdt.src = listaProduto[index]
-    let precoPdt = document.createElement('td')
-    linha.appendChild(precoPdt)
-    precoPdt.textContent = listaPreco[index]
-    let quantidade = document.createElement('td')
-
-
-  })
-  
-}
-
-
-for (let index = 0; index < img.length; index++) {
     img[index].addEventListener("click",(e)=>{
     preco.innerHTML = listaPreco[index]
     p.innerHTML = lista[index]
@@ -55,8 +35,24 @@ for (let index = 0; index < img.length; index++) {
     imgOculta.src= listaProduto[index]
     titulo.style.textAlign = "center"
     div.style.display = "block"
+   
     })
     x.addEventListener("click",(e)=>{
       div.style.display ="none"
     })
+    compra.addEventListener("click",(e)=>{
+      let linha = document.createElement('tr')
+      let linhaImg = document.createElement('td')
+      let imgPdt = document.createElement('img')
+      let precoPdt = document.createElement('td')
+      
+      imgPdt.src = imgOculta.src
+      imgPdt.style.width = "100px";
+       precoPdt.textContent = preco.innerHTML
+
+      linha.appendChild(precoPdt)
+      linhaImg.appendChild(imgPdt)
+      linha.appendChild(linhaImg)
+      entradaCompra.appendChild(linha)
+     })
 }

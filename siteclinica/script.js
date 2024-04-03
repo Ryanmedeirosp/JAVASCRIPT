@@ -25,26 +25,6 @@ const imgOculta = document.querySelector("#imgOculta")
 const listaPreco = ["R$ 35,00","R$ 10,00","R$ 25,00","R$ 50,00","R$ 70,00","R$ 40,00"]
 const preco = document.querySelector("#preco")
 const compra = document.querySelector("#compre")
-const entradaCompra = document.querySelector("#entradaCompra")
-
-for (let index = 0; index < img.length; index++) {
-  compra.addEventListener("click",(e)=>{
-    let linha = document.createElement('tr')
-    entradaCompra.appendChild(linha)
-    let linhaImg = document.createElement('td')
-    linha.appendChild(linhaImg)
-    let imgPdt = document.createElement('img')
-    linhaImg.appendChild(imgPdt)
-    imgPdt.src = listaProduto[index]
-    let precoPdt = document.createElement('td')
-    linha.appendChild(precoPdt)
-    precoPdt = listaPreco[index]
-    let quantidade = document.createElement('td')
-
-
-  })
-  
-}
 
 
 for (let index = 0; index < img.length; index++) {
