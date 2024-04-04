@@ -26,6 +26,38 @@ const listaPreco = ["R$ 35,00","R$ 10,00","R$ 25,00","R$ 50,00","R$ 70,00","R$ 4
 const preco = document.querySelector("#preco")
 const compra = document.querySelector("#compre")
 
+const listaVazia = []
+listaVazia.push(sessionStorage.getItem('imagem'))
+
+const listaVenda = []
+listaVenda.push(sessionStorage.getItem('preco'))
+
+for (let index = 0; index< listaVazia.length; index++) {
+  let linha = document.createElement('tr')
+  let linhaImg = document.createElement('td')
+  let imgPdt = document.createElement('img')
+  let precoPdt = document.createElement('td')
+
+  imgPdt.src = listaVazia[index]
+  precoPdt.textContent = listaVenda[index]
+
+  imgPdt.style.width = "100px";
+
+  entradaCompra.appendChild(linha)
+  linha.appendChild(linhaImg)
+  linhaImg.appendChild(imgPdt)
+  linha.appendChild(precoPdt)
+
+  let conteudo4 = document.createElement('td')
+  let btn = document.createElement('button')
+  linha.appendChild(conteudo4)
+  conteudo4.appendChild(btn)
+  btn.textContent = 'excluir'
+  btn.addEventListener("click", (e)=>{
+    entradaCompra.removeChild(linha)
+})
+
+}
 
 for (let index = 0; index < img.length; index++) {
     img[index].addEventListener("click",(e)=>{

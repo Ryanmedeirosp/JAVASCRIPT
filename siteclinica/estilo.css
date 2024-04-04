@@ -121,20 +121,12 @@ p{
     text-align: justify;
     font-size: 20px;
 }
-#ipsum{
-    top: -150px;
-    position: relative;
-    font-size: 20px;
-    width: 700px;
-    margin-right: 20px;
-    margin-left: 20px;
 
-}
 .ipsum{
-    top: -100px;
+    
     position: relative;
     font-size: 20px;
-    width: 800px;
+    width: 1200px;
     
     margin-right: 100px;
     margin-left: 100px;
@@ -400,6 +392,7 @@ p{
     text-align: justify;
 }
 #imgEntrada{
+    margin-left: 100px;
     border-radius: 80px;
     width:500px; 
     height:500px;
@@ -409,6 +402,7 @@ p{
 }
 #slide{
     position: relative;
+
     width: 1800px;
     height: 500px;
     overflow: hidden;
@@ -451,4 +445,7 @@ p{
 #preco{
     margin: 20px;
     font-family:  Century Gothic;
+}
+table{
+    margin: 20px;
 }
