@@ -334,6 +334,7 @@ span{
 #apresentacaoOrc{
     display: flex;
     align-items:   center;
+    justify-content: center;
     width: 100%;
     height: 1000px;
     border: 3px solid black;
@@ -448,4 +449,35 @@ p{
 }
 table{
     margin: 20px;
+}
+table{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+thead{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+th{
+    font-size: 30px;
+    width: 150px;
+    border: 2px solid black;
+}
+tbody{
+    width: 500px;
+    margin: 15px;
+    border-collapse: collapse;
+}
+
+td{
+    font-size: 30px;
+    width: 120px;
+    border: 2px solid black;
+}
+#excluir{
+    font-size: 20px;
+    width: 120px;
+    height: 40px;
 }

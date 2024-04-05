@@ -37,13 +37,23 @@ for (let index = 0; index < img.length; index++) {
     imgOculta.src= listaProduto[index]
     titulo.style.textAlign = "center"
     div.style.display = "block"
-    compra.addEventListener("click",(e)=>{
-      sessionStorage.setItem('imagem',`${imgOculta.src}`)
-      sessionStorage.setItem('preco',`${preco.innerHTML}`)
-     })
+    
     })
     x.addEventListener("click",(e)=>{
       div.style.display ="none"
     })
 }
+var carrinho = []
 
+
+compra.addEventListener("click",(e)=>{
+  let js = {
+    "foto" : `${imgOculta.src}`,
+    "preco" : `${preco.innerHTML}`
+  }
+  if (sessionStorage.listasessao) {
+    carrinho = JSON.parse(sessionStorage.getItem('listasessao'))
+  }
+  carrinho.push(js)
+  sessionStorage.listasessao = JSON.stringify(carrinho)
+})

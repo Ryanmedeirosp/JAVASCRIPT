@@ -25,36 +25,44 @@ const imgOculta = document.querySelector("#imgOculta")
 const listaPreco = ["R$ 35,00","R$ 10,00","R$ 25,00","R$ 50,00","R$ 70,00","R$ 40,00"]
 const preco = document.querySelector("#preco")
 const compra = document.querySelector("#compre")
+const qdtPdt = ["100 Und", "100Und","100 Und","30 Und","100 Und", "40 Und"]
 
-const listaVazia = []
-listaVazia.push(sessionStorage.getItem('imagem'))
+var listaVazia = []
 
-const listaVenda = []
-listaVenda.push(sessionStorage.getItem('preco'))
+if (sessionStorage.listasessao) {
+  carrinho = JSON.parse(sessionStorage.getItem('listasessao'))
+}
 
-for (let index = 0; index< listaVazia.length; index++) {
+for (let index = 0; index< carrinho.length; index++) {
   let linha = document.createElement('tr')
   let linhaImg = document.createElement('td')
   let imgPdt = document.createElement('img')
   let precoPdt = document.createElement('td')
+  let qtd = document.createElement('td')
+  let produto1 = carrinho[index]
 
-  imgPdt.src = listaVazia[index]
-  precoPdt.textContent = listaVenda[index]
+  imgPdt.src = produto1.foto
+  precoPdt.textContent = produto1.preco
+  qtd.textContent = qdtPdt[index]
 
-  imgPdt.style.width = "100px";
+  imgPdt.style.width = "120px";
 
   entradaCompra.appendChild(linha)
   linha.appendChild(linhaImg)
   linhaImg.appendChild(imgPdt)
   linha.appendChild(precoPdt)
+  linha.appendChild(qtd)
 
   let conteudo4 = document.createElement('td')
   let btn = document.createElement('button')
+  btn.id = "excluir"
   linha.appendChild(conteudo4)
   conteudo4.appendChild(btn)
-  btn.textContent = 'excluir'
+  btn.textContent = 'EXCLUIR'
   btn.addEventListener("click", (e)=>{
     entradaCompra.removeChild(linha)
+    carrinho.splice(index,10)
+    sessionStorage.listasessao = JSON.stringify(carrinho)
 })
 
 }
