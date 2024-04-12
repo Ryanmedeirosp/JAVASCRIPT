@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js" defer></script>
+    <title>API TEMPO</title>
+</head>
+<body>
+    <div id="entrada" >
+        <h1>CIDADE QUE DESEJA CLIMA ...</h1>
+        <input id="cityName" placeholder="  Digite o nome da ciade..." type="text">
+        <button id="btnTempo">ENVIAR</button>
+    </div>
+    <div id="saida">
+        <h1>TEMPO REAL</h1>
+        <div class="container">
+            <h5>
+                TEMPERATURA ATUAL: 
+            </h5>
+            <span id="tempAtual"> </span>
+
+        </div>
+        <div class="container">
+            <h5>
+                SENSAÇÃO TÉRMICA: 
+            </h5>
+            <span id="sensacaoTermica"> </span>
+
+        </div>
+        <div class="container">
+            <h5>
+                TEMPERATURA MÁXIMA: 
+            </h5>
+            <span id="tempMax"></span>
+
+        </div>
+        <div class="container">
+            <h5>
+                TEMPERATURA MÍNIMA: 
+            </h5>
+            <span id="tempMin"></span>
+
+        </div>
+        <div class="container">
+            <h5>
+                VELOCIADE DO VENTO: 
+            </h5>
+            <span id="veloVento"></span>
+
+        </div>
+        <div class="container">
+            <h5>
+                UMIDADE DO AR: 
+            </h5>
+            <span id="umidadeAr"></span>
+
+        </div>
+    </div>
+</body>
+</html>
