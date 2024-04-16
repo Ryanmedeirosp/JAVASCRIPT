@@ -1,6 +1,7 @@
 const categories = document.querySelector("#categories")
 const products = document.querySelector("#products")
 const modal = document.querySelector("#modal")
+const detalhesProdutos = document.querySelector("#detailsProduct")
 
 window.onload = () => {
     listarCategoria()
@@ -17,16 +18,26 @@ function buscarProdutos(categoria) {
     console.log(information)
     for (let index = 0; index < information.length; index++) {
         let image = document.createElement('img')
+        let container = document.createElement('div')
         let name = document.createElement('h1')
+        let price = document.createElement('h3')
         products.appendChild(image)
-        products.appendChild(name)
-        products.style.height = "100%"
-        name.innerHTML = information[index].title
+        products.appendChild(container)
+        container.appendChild(name)
+        container.appendChild(price)
         image.src = information[index].image
+        name.innerHTML = information[index].title
+        price.innerHTML =  "R$ " + information[index].price 
+        products.style.height = "100%"
         image.id = "imageProduct"
         name.id = "nameProduct"
         image.addEventListener("click", (e) => {
-            modal.style.display = "flex"
+            modal.style.display = "flex";
+            let detalhes = document.createElement('p');
+            detalhesProdutos.appendChild(detalhes);
+            detalhes.textContent = information[index].description
+            detalhes.id = "pInModal"
+            
         })
     }
 }
@@ -48,6 +59,19 @@ function listarCategoria() {
             buscarProdutos(click.textContent)
         })
     }
+    let row = document.createElement('div')
+    let click = document.createElement('button')
+    categories.appendChild(row)
+    row.appendChild(click)
+    click.textContent = "See All"
+    click.addEventListener("click", (e) => {
+        products.innerHTML = ''
+        products.style.height = "600px"
+        products.style.overflow = "auto"
+        listaProdutos()
+        
+    })
+
 }
 
 function listaProdutos() {
@@ -58,15 +82,24 @@ function listaProdutos() {
     let information = JSON.parse(request.response)
     for (let index = 0; index < information.length; index++) {
         let image = document.createElement('img')
+        let container = document.createElement('div')
         let name = document.createElement('h1')
+        let price = document.createElement('h3')
         products.appendChild(image)
-        products.appendChild(name)
+        products.appendChild(container)
+        container.appendChild(name)
+        container.appendChild(price)
         image.src = information[index].image
         name.innerHTML = information[index].title
+        price.innerHTML =  "R$ " + information[index].price 
         image.id = "imageProduct"
         name.id = "nameProduct"
         image.addEventListener("click", (e) => {
-            modal.style.display = "flex"
+            modal.style.display = "flex";
+            let detalhes = document.createElement('p');
+            detalhesProdutos.appendChild(detalhes);
+            detalhes.textContent = information[index].description
+            detalhes.id = "pInModal"
         })
     }
 }

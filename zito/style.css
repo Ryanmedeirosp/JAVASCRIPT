@@ -10,7 +10,7 @@
 #category, #cart{
     margin: 15px;
     width: 400px;
-    height:900px;
+    height:600px;
     border: 2px solid black;
     display: flex;
     align-items: center;
@@ -21,7 +21,7 @@
     display: flex;
     margin: 15px;
     width: 1000px;
-    height: 900px;
+    height: 600px;
     display: flex;
     overflow: auto;
 }
@@ -29,7 +29,6 @@
     width: 200px;
     height: 50px;
     margin: 5px;
-    
 }
 button{
     border: none;
@@ -42,8 +41,8 @@ button:hover{
 }
 #imageProduct{
     margin: 20px;
-    width: 200px;
-    height: 140px;
+    width: 120px;
+    height: 100px;
 }
 #imageProduct:hover{
     cursor: pointer;
@@ -69,6 +68,11 @@ button:hover{
 
 }
 #nameProduct{
-    font-size: 20px;
-    width: 250px;
+    font-size: 15px;
+    width: 150px;
+}
+#pInModal{
+    margin: 10px;
+    text-align: justify;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
