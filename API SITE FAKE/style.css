@@ -13,7 +13,6 @@
 #category{
     display: flex;
     flex-direction: column;
-    
 }
 #cart{
     display: none;
@@ -35,7 +34,7 @@
     width: 1000px;
     height: 600px;
     position: absolute;
-    top: 50px;
+    top: 100px;
     left: 10px;
     overflow: auto;
 }
@@ -44,6 +43,9 @@
     width: 1000px;
     height: 50px;
     margin: 5px;
+    border: 3px solid black;
+    border-radius: 60px;
+    align-items: center;
 }
 button{
     border: none;
@@ -53,6 +55,7 @@ button:hover{
     background-color: lightgrey;
     cursor: pointer;
     opacity: 0.7;
+    border-radius: 60px;
 }
 #imageProduct{
     margin: 20px;
@@ -60,10 +63,13 @@ button:hover{
     height: 100px;
     border: 1px solid black;
     border-radius: 60px;
+    transition: 1s;
 }
 #imageProduct:hover{
     cursor: pointer;
     opacity: 0.7;
+    width: 150px;
+    height: 120px;
 }
 
 #modal{
@@ -79,8 +85,8 @@ button:hover{
 }
 #detailsProduct{
     background-color: white;
-    width: 500px;
-    height: 450px;
+    width: 600px;
+    height: 600px;
     border: 3px solid black;
     flex-direction: column;
     display: flex;
@@ -91,7 +97,7 @@ button:hover{
     width: 150px;
 }
 #pInModal{
-    margin: 10px;
+    margin: 13px;
     text-align: justify;
     font-size: 17px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -125,9 +131,9 @@ button:hover{
     font-size: 30px;
 }
 #productInCart{
-    margin: 20px;
-    width: 80px;
-    height: 60px;
+    margin: 10px;
+    width: 60px;
+    height: 50px;
 }
 #productsInCart{
     display: flex;
@@ -155,14 +161,47 @@ button:hover{
 
 }
 #divPrice{
-    width: 68px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #imageModal{
-    margin-top: 5px;
-    width: 200px;
-    height: 150px;
+    margin: 15px;
+    width: 250px;
+    height: 180px;
 }
 #categoryName{
     margin-left: 40px;
     font-size: 30px;
+}
+#redirecionar{
+    margin: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 260px;
+    height: 30px;
+    font-size: 25px;
+    background-color: rgb(11, 185, 11);
+    border: 2px solid black;
+    border-radius: 60px;
+    color: black;
+    text-decoration: none;
+    transition: 0.5s;
+}
+#redirecionar:hover{
+    width: 290px;
+    height: 40px;
+    opacity: 0.7;
+    font-size: 28px;
+}
+#cartProductName{
+    font-size: 8px;
+    text-align: justify;
+}
+#cartContainer{
+    height: 100px;
+    justify-content: center;
 }
