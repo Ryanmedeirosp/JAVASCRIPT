@@ -1,0 +1,168 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+#category{
+    display: flex;
+    flex-direction: column;
+    
+}
+#cart{
+    display: none;
+    border-radius: 30px;
+    position: relative;
+    left: 850px;
+    margin: 15px;
+    width: 300px;
+    height:500px;
+    border: 2px solid black;
+    align-items: center;
+    flex-direction: column;
+    
+}
+#products{
+    flex-wrap: wrap;
+    display: flex;
+    margin: 15px;
+    width: 1000px;
+    height: 600px;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    overflow: auto;
+}
+#categories{
+    display: flex;
+    width: 1000px;
+    height: 50px;
+    margin: 5px;
+}
+button{
+    border: none;
+    background-color: white;
+}
+button:hover{
+    background-color: lightgrey;
+    cursor: pointer;
+    opacity: 0.7;
+}
+#imageProduct{
+    margin: 20px;
+    width: 120px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 60px;
+}
+#imageProduct:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+#modal{
+    display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0,0.7);
+}
+#detailsProduct{
+    background-color: white;
+    width: 500px;
+    height: 450px;
+    border: 3px solid black;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+#nameProduct{
+    font-size: 15px;
+    width: 150px;
+}
+#pInModal{
+    margin: 10px;
+    text-align: justify;
+    font-size: 17px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#close{
+    color: red;
+    float: right;
+    position: relative;
+    top: -200px;
+    font-size: 90px ;
+    font-weight: bold ;
+}
+#close:hover, #close:focus{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+#botaoCompra{
+    border-radius: 100px;
+    margin-top: 30px;
+    background-color: rgb(11, 185, 11);
+    border: 1px solid black;
+    width: 350px;
+    height: 50px;
+    font-size: 20px;
+    transition: 1s;
+}
+#botaoCompra:hover{
+    width: 450px;
+    height: 80px;
+    font-size: 30px;
+}
+#productInCart{
+    margin: 20px;
+    width: 80px;
+    height: 60px;
+}
+#productsInCart{
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+#botaoExcluir{
+    margin-left: 5px;
+    border-radius: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 2px solid black;
+    background-color: red;
+    width: 70px;
+    height: 30px;
+    font-size: 15px;
+
+}
+#cartContainer{
+    border-radius: 100px;
+    margin: 5px;
+    width: 265px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+
+}
+#divPrice{
+    width: 68px;
+}
+#imageModal{
+    margin-top: 5px;
+    width: 200px;
+    height: 150px;
+}
+#categoryName{
+    margin-left: 40px;
+    font-size: 30px;
+}
