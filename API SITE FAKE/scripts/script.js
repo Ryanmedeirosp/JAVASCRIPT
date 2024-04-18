@@ -5,6 +5,10 @@ const detalhesProdutos = document.querySelector("#detailsProduct")
 const close = document.querySelector("#close")
 const cart = document.querySelector("#productsInCart")
 const cartModal = document.querySelector("#cart")
+const valorTotal = document.querySelector("#somaValor")
+const contadorCarrinho = document.querySelector("#contadorCarrinho")
+var contador = 0
+var valorCarrinho = 0
 
 window.onload = () => {
     listarCategoria()
@@ -58,8 +62,14 @@ function buscarProdutos(categoria) {
             detalhes.id = "pInModal";
 
             carrinho.addEventListener("click",(e)=>{
-
-                cartModal.style.display = "flex"
+                carrinho.textContent = "PRODUTO ADICIONADO"
+                carrinho.disabled = true
+                setTimeout(() => {
+                    modal.style.display = "none";
+                }, 2000);
+               
+                contador ++
+                contadorCarrinho.innerHTML = contador
                 let container = document.createElement('div');
                 let image = document.createElement('img');
                 let divDescPrice = document.createElement('div');
@@ -80,51 +90,24 @@ function buscarProdutos(categoria) {
                 excluir.id = "botaoExcluir"
                 container.id = "cartContainer"
                 divDescPrice.id = "divPrice"
+                x.id = "x"
+                y.id = "cartProductName";
+                valorCarrinho += information[index].price;
+                valorTotal.textContent = "TOTAL: " +  valorCarrinho.toFixed(2)
 
                 excluir.addEventListener("click",(e)=>{
+                    contador --
+                    contadorCarrinho.innerHTML = contador
                     cart.removeChild(container)
+                    valorCarrinho -= information[index].price;
+                    valorTotal.textContent = "TOTAL: " + valorCarrinho.toFixed(2)
                 })
-
-            })
-            
+            }) 
         })
-        
     }
 }
 
-function listarCategoria() {
-    var url = "https://fakestoreapi.com/products/categories"
-    var request = new XMLHttpRequest();
-    request.open("GET", url, false);
-    request.send()
-    let information = JSON.parse(request.response)
-    for (let index = 0; index < information.length; index++) {
-        let row = document.createElement('div')
-        let click = document.createElement('button')
-        categories.appendChild(row)
-        row.appendChild(click)
-        click.textContent = information[index]
-        click.id = 'categoryName'
-        click.addEventListener("click", (e) => {
-            products.innerHTML = ''
-            buscarProdutos(click.textContent)
-        })
-    }
-    let row = document.createElement('div')
-    let click = document.createElement('button')
-    categories.appendChild(row)
-    row.appendChild(click)
-    click.textContent = "see all"
-    click.id = 'categoryName'
-    click.addEventListener("click", (e) => {
-        products.innerHTML = ''
-        products.style.height = "600px"
-        products.style.overflow = "auto"
-        listaProdutos()
-        
-    })
 
-}
 
 function listaProdutos() {
     var url = "https://fakestoreapi.com/products"
@@ -170,8 +153,14 @@ function listaProdutos() {
             detalhes.id = "pInModal";
 
             carrinho.addEventListener("click",(e)=>{
-
-                cartModal.style.display = "flex"
+                carrinho.textContent = "PRODUTO ADICIONADO"
+                carrinho.disabled = true
+                setTimeout(() => {
+                    modal.style.display = "none";
+                }, 2000);
+               
+                contador ++
+                contadorCarrinho.innerHTML = contador
                 let container = document.createElement('div');
                 let image = document.createElement('img');
                 let divDescPrice = document.createElement('div');
@@ -194,8 +183,16 @@ function listaProdutos() {
                 container.id = "cartContainer"
                 divDescPrice.id = "divPrice"
                 y.id = "cartProductName"
+                x.id = "x"
+                valorCarrinho += information[index].price;
+                valorTotal.textContent = "TOTAL: " +  valorCarrinho.toFixed(2)
+
                 excluir.addEventListener("click",(e)=>{
+                    contador --
+                    contadorCarrinho.innerHTML = contador
                     cart.removeChild(container)
+                    valorCarrinho -= information[index].price;
+                    valorTotal.textContent = "TOTAL: " + valorCarrinho.toFixed(2)
                 })
 
             })

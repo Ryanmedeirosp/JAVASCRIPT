@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="scripts/Lista.js" defer></script>
+    <script src="scripts/script.js" defer></script>
     <title>Loja Virtual</title>
 </head>
 <body>
@@ -13,14 +14,15 @@
         <div id="category">
            
             <div id="categories">
-            
+                <p id="contadorCarrinho">0</p>
             </div>
             <div id="cart">
-                <h1>CARRINHO</h1>
+                <h1 id="carrinhoTitulo">CARRINHO</h1>
                 <div id="productsInCart">
 
                 </div>
                 <a id="redirecionar" href="fnalizarCompra/finish.html">FINALIZAR COMPRA</a>
+                <label id="somaValor" ></label>
             </div>
         </div>
         <div id="products">
