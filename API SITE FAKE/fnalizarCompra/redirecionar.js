@@ -1,6 +1,6 @@
 if (sessionStorage.listasessao) {
-    let carrinho = JSON.parse(sessionStorage.getItem('listasessao'))
-    console.log(carrinho)
+    let information = JSON.parse(sessionStorage.getItem('listasessao'))
+    console.log(information)
 }
 
 function buscarCep(){
