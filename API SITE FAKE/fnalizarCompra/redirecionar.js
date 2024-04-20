@@ -1,6 +1,6 @@
+var finalizacao = []
 if (sessionStorage.listasessao) {
-    let information = JSON.parse(sessionStorage.getItem('listasessao'))
-    console.log(information)
+    finalizacao = JSON.parse(sessionStorage.getItem('listasessao'))
 }
 
 function buscarCep(){
@@ -32,3 +32,6 @@ function buscarCep(){
   window.addEventListener("click", (e)=>{
     buscarCep();
   }) 
+
+
+  
