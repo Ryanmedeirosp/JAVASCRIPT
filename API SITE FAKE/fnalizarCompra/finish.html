@@ -3,42 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="redirecionar.js"></script>
+    <script src="botao.js" defer></script>
+    <script src="redirecionar.js" defer></script>
+    <script src="cep.js" defer></script>
     <link rel="stylesheet" href="styleFinalizarCompra.css">
+
     <title>Document</title>
 </head>
 <body>
     <div id="name">
-        <h1 id="titulo">FINALIZAÇÃO COMPRA</h1>
+        <h1 id="titulo">FINALIZAÇÃO DA COMPRA</h1>
+        <a id="voltar" href="../index.html">PÁGINA INICIAL</a>
     </div>
     <div id="container">
+        <div class="input" id="produto">
+            <h1 id="tituloCarrinho">CARRINHO</h1>
+            <div id="produtoContainer">
+
+            </div>
+            <label id="totalCompra"></label>
+        </div>
+
         <div class="input" id="infoPessoal">
-            <p class="pForm">NOME:</p> <input name="NOME" class="inputForm" placeholder="Digite seu nome..." type="text" >
-            <p class="pForm">EMAIL:</p><input name="EMAIL" class="inputForm" placeholder="Digite seu Email..." type="email" >
-            <p class="pForm">TELEFONE:</p> <input name="TELEFONE" class="inputForm" placeholder="Digite seu número..." type="number" >
+
+            <p class="pForm">NOME:</p> <input name="NOME" class="enabled" placeholder="Digite seu nome..." type="text" required>
+
+            <p class="pForm">EMAIL:</p><input name="EMAIL" class="enabled" placeholder="Digite seu Email..." type="email"  required>
+            
+            <p class="pForm" >TELEFONE:</p> <input name="TELEFONE" class="enabled" placeholder="Digite seu número..." type="number" required>
+
             <div class="botaoAvancar">
                 <button id="proximoPessoal">AVANÇAR</button>
             </div>
-           
+
         </div>
-        <div class="input" id="transporte">
 
-            <p class="pForm">CEP: </p> <input id="cep" name="CEP" class="inputForm" placeholder="Digite seu CEP..." type="number" >
+        <div class="input" id="transporte" >
 
-            <p class="pForm">CIDADE: </p> <input id="cidade" name="CIDADE" class="inputForm" placeholder="Digite sua cidade..." type="text" >
+            <p class="pForm">CEP: </p> <input id="cep" name="CEP" class="disabled" placeholder="Digite seu CEP..." type="number" required>
 
-            <p class="pForm">BAIRRO: </p> <input id="bairro" name="BAIRRO" class="inputForm" placeholder="Digite seu bairro ..." type="text" >
+            <p class="pForm">CIDADE: </p> <input id="cidade" name="CIDADE" class="disabled" placeholder="Digite sua cidade..." type="text" required>
 
-            <p class="pForm">RUA: </p> <input id="rua" name="RUA" class="inputForm" placeholder="Digite sua rua..." type="text" >
+            <p class="pForm">BAIRRO: </p> <input id="bairro" name="BAIRRO" class="disabled" placeholder="Digite seu bairro ..." type="text" required>
+
+            <p class="pForm">RUA: </p> <input id="rua" name="RUA" class="disabled" placeholder="Digite sua rua..." type="text" required>
+
             <div class="botaoAvancar">
-                <button id="proximoTransporte">AVANÇAR</button>
+
+                <button id="proximoTransporte" >FINALIZAR</button>
+
             </div>
            
 
         </div>
-        <div class="input" id="pagamento">
-            
-        </div>
+       
 
     </div>
     

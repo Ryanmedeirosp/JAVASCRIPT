@@ -77,8 +77,8 @@ button:hover{
 #imageProduct:hover{
     cursor: pointer;
     opacity: 0.7;
-    width: 150px;
-    height: 120px;
+    width: 130px;
+    height: 110px;
 }
 
 #modal{

@@ -15,7 +15,7 @@ body{
     background-color: orange;
 }
 #titulo{
-    font-size: 50px;
+    font-size: 45px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 #container{
@@ -32,12 +32,13 @@ body{
     height: 300px;
 
 }
-.inputForm{
+.disabled, .enabled{
     margin-top: 10px;
     margin-bottom: 10px;
     width: 300px;
     height: 30px;
 }
+
 .pForm{
     font-size: 15px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -47,11 +48,118 @@ body{
     display: flex;
     justify-content: end;
 }
+
+
 #proximoPessoal, #proximoTransporte{
+    font-size: 17px;
     width: 150px;
-    height: 25px;
+    height: 30px;
     border: 0.5px solid black;
     background-color: rgb(75, 224, 75);
     border-radius: 60px;
     font-weight: bold;
 }
+#proximoPessoal:hover, #proximoTransporte:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+#infoPessoal{
+    pointer-events: all;
+    opacity: 1;
+}
+#transporte{
+    pointer-events: none;
+    opacity: 0.4;
+}
+#imgProduto{
+    margin-right: 30px;
+    width: 200px;
+    height: 120px;
+}
+#divProduto{
+    margin-left: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 350px;
+    border-bottom: 1px solid black;
+    
+}
+#produto{
+    width: 450px;
+    border-radius: 60px;
+    width: 450px;
+    height: 450px;
+    background-color: white;
+    border: 1px solid black;
+}
+#produtoContainer{
+    
+    width: 420px;
+    height: 370px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+}
+#precoProduto{
+    position: relative;
+    top: 50px;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#nomeProduto{
+    margin-right: 20px;
+    
+    text-align: justify ;
+    position: relative;
+    top: 35px;
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#tituloCarrinho{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 130px;
+    
+    
+}
+#voltar{
+    position: relative;
+    left: 250px;
+    top: -30px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#voltar:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
+#totalCompra{
+    position: relative;
+    left: 100px;
+    font-size: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+ 
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+ 
+::-webkit-scrollbar-thumb {
+    background: rgb(177, 177, 177); 
+    border-radius: 10px;
+  }
+  
+  
+::-webkit-scrollbar-thumb:hover {
+    background: grey; 
+  }
