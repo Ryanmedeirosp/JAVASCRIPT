@@ -58,11 +58,13 @@ body{
     background-color: rgb(75, 224, 75);
     border-radius: 60px;
     font-weight: bold;
+    position: fixed;
 }
 #proximoPessoal:hover, #proximoTransporte:hover{
     cursor: pointer;
     opacity: 0.7;
 }
+
 #infoPessoal{
     pointer-events: all;
     opacity: 1;
@@ -125,9 +127,9 @@ body{
     
 }
 #voltar{
-    position: relative;
-    left: 250px;
-    top: -30px;
+    width: 200px;
+    position: fixed;
+    left: 1200px;
     text-decoration: none;
     color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -142,6 +144,12 @@ body{
     font-size: 35px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
+}
+span{
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    bottom: -80px;
 }
 ::-webkit-scrollbar {
     width: 7px;
