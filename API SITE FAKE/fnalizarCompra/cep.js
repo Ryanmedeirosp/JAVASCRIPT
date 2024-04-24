@@ -12,12 +12,13 @@ function buscarCep(){
             document.getElementById("cidade").value = endereco.city;
             document.getElementById("rua").value = endereco.street;
             document.getElementById("bairro").value = endereco.neighborhood;
+            spanFinalizar.textContent =""
           }
           else if( req.status === 404){
-            span.textContent ="SEU CEP ESTÁ INVÁLIDO"
+            spanFinalizar.textContent ="SEU CEP ESTÁ INVÁLIDO"
           }
            else{
-             span.textContent = "erro"
+             spanFinalizar.textContent = "erro"
            }
           let endereco = JSON.parse(req.response);
           console.log(`${input[0].value},${input[1].value},${input[2].value},${endereco.city},${endereco.street},${endereco.neighborhood}`) 

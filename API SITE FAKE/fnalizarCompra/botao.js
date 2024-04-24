@@ -4,7 +4,9 @@ const input = document.querySelectorAll(".enabled");
 const span = document.querySelector("#span");
 const finilizarInput = document.querySelectorAll(".disabled");
 const spanFinalizar = document.querySelector("#spanFinalizar");
-const titulo = document.querySelector("#titulo")
+const titulo = document.querySelector("#titulo");
+const btnProduto = document.querySelector("#btnProduto");
+const divProduto = document.querySelector("#produto")
 
 btnavancar1.addEventListener("click", (e)=>{
     if (input[0].name === "NOME" && input[0].value === ""){
@@ -39,9 +41,19 @@ finalizar.addEventListener("click", (e)=>{
     }else if(finilizarInput[3].name === "RUA" && finilizarInput[3].value === "" ){
         spanFinalizar.textContent = "PREENCHA SUA RUA"
     }else{
-        titulo.textContent = "PARABÉNS VOCÊ COMPROU SEU PRODUTO"
+        titulo.textContent = "OBRIGADO PELA SUA COMPRA"
+        span.textContent = ""
+        spanFinalizar.textContent = ""
         transporte.style.pointerEvents = "none"
         transporte.style.opacity = "0.4"
-        
+        setTimeout(()=>{
+            window.location.href = "../index.html"
+        },3000)
     }
+})
+btnProduto.addEventListener("click",(e)=>{
+        infoPessoal.style.pointerEvents = "All";
+        infoPessoal.style.opacity = "1"
+        divProduto.style.pointerEvents = "none";
+        divProduto.style.opacity = "0.4"
 })

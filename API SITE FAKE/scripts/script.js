@@ -18,7 +18,12 @@ window.onload = () => {
 
 }
 
-close.addEventListener("click",(e)=>{
-    modal.style.display = "none"
-})
 
+redirecionar.addEventListener("click",(e)=>{
+    if (cart.children.length === 0) {
+        redirecionar.href = "index.html"
+    }
+    else{
+        redirecionar.href = "fnalizarCompra/finish.html"
+    }
+})

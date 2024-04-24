@@ -21,9 +21,16 @@ if (sessionStorage.listasessao) {
         divProduto.appendChild(precoProduto);
         
 
-        precoProduto.textContent = "R$" + finalizacao[index].preco;
+        precoProduto.textContent = "R$" + finalizacao[index].preco.toFixed(2);
         imgProduto.src = finalizacao[index].imagem;
         nomeProduto.textContent = finalizacao[index].nome
+        if (finalizacao[index].nome.length > 30) {
+            nomeProduto.textContent = finalizacao[index].nome.substring(0,30) + "..."
+        }
+        else{
+            nomeProduto.textContent = finalizacao[index].nome
+        }
+        
         
         precoProduto.id = "precoProduto"
         imgProduto.id = "imgProduto"

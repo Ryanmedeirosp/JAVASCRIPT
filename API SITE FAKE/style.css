@@ -101,9 +101,18 @@ button:hover{
     display: flex;
     align-items: center;
 }
+#priceProduct{
+    font-size: 25px;
+    font-weight: bold;
+}
 #nameProduct{
     font-size: 15px;
     width: 150px;
+}
+
+#containerProduct:hover{
+    cursor: pointer;
+    opacity: 0.6;
 }
 #pInModal{
     margin: 13px;
