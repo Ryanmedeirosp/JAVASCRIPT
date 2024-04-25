@@ -224,12 +224,19 @@ button:hover{
     width: 250px;
     height: 180px;
 }
-#categoryName{
+.categoryName{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: orange;
     color: black;
     margin-left: 40px;
     font-size: 27px;
+}
+.categoryName:hover{
+    background-color: orange;
+    opacity: 0.6;
+}
+.categoryName:focus{
+    color: white;
 }
 #redirecionar{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

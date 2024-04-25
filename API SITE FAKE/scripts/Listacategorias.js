@@ -10,12 +10,21 @@ function listarCategoria() {
         categories.appendChild(row)
         row.appendChild(click)
         click.textContent = information[index].toUpperCase()
-        click.id = 'categoryName'
+        click.classList.add('categoryName')
+        
+        categories.addEventListener("click",(e)=>{
+            if (categories.children) {
+                categories.children[index].style.color = "white"
+            }
+          
+        })
+
         click.addEventListener("click", (e) => {
-            
+           
             products.innerHTML = ''
             buscarProdutos(information[index])
         })
+        
     }
 
     let row = document.createElement('div')
@@ -23,7 +32,8 @@ function listarCategoria() {
     categories.appendChild(row)
     row.appendChild(click)
     click.textContent = "SEE ALL"
-    click.id = 'categoryName'
+    click.classList.add('categoryName')
+
     click.addEventListener("click", (e) => {
         
         products.innerHTML = ''
@@ -46,3 +56,4 @@ function listarCategoria() {
            
     })
 }
+
