@@ -12,6 +12,7 @@ function listarCategoria() {
         click.textContent = information[index].toUpperCase()
         click.id = 'categoryName'
         click.addEventListener("click", (e) => {
+            
             products.innerHTML = ''
             buscarProdutos(information[index])
         })
@@ -24,6 +25,7 @@ function listarCategoria() {
     click.textContent = "SEE ALL"
     click.id = 'categoryName'
     click.addEventListener("click", (e) => {
+        
         products.innerHTML = ''
         products.style.height = "1300px"
         listaProdutos()
