@@ -7,7 +7,7 @@ function buscarProdutos(categoria) {
     let information = JSON.parse(request.response)
 
     for (let index = 0; index < information.length; index++) {
-
+        
         let image = document.createElement('img')
         let containerGeral = document.createElement('div')
         let container = document.createElement('div')
