@@ -9,30 +9,35 @@ function buscarProdutos(categoria) {
     for (let index = 0; index < information.length; index++) {
 
         let image = document.createElement('img')
+        let containerGeral = document.createElement('div')
         let container = document.createElement('div')
         let name = document.createElement('h1')
         let price = document.createElement('h3')
-        products.appendChild(image)
-        products.appendChild(container)
+        products.appendChild(containerGeral)
+        containerGeral.appendChild(image)
+        containerGeral.appendChild(container)
         container.appendChild(name)
         container.appendChild(price)
         image.src = information[index].image
-        if (information[index].title.length > 30) {
-            name.innerHTML = information[index].title.substring(0,30) + "..."
+        if (information[index].title.length > 25) {
+            name.innerHTML = information[index].title.substring(0,25) + "..."
+       
         }
         else{
-            name.innerHTML = information[index].title
+            name.innerHTML = information[index].title + " for man";
+            
         }
         
         price.innerHTML =  "R$ " + information[index].price.toFixed(2)
-        products.style.height = "300px"
+        containerGeral.id = "containergeral"
+        products.style.height = "600px"
         container.id = "containerProduct"
         price.id = "priceProduct"
         image.id = "imageProduct"
         name.id = "nameProduct"
 
         image.addEventListener("click", (e) => {
-
+            cartModal.style.display = "none"
             modal.style.display = "flex";
             detalhesProdutos.innerHTML = ''
             let imageModal = document.createElement('img')
@@ -49,6 +54,7 @@ function buscarProdutos(categoria) {
             carrinho.innerHTML = "ADICIONAR NO CARRINHO"
             carrinho.id = "botaoCompra"
             detalhes.textContent = information[index].description;
+            priceModal.id = "priceInModal"
             detalhes.id = "pInModal";
 
             close.addEventListener("click",(e)=>{
@@ -122,7 +128,7 @@ function buscarProdutos(categoria) {
             }) 
         })
         container.addEventListener("click", (e) => {
-
+            cartModal.style.display = "none"
             modal.style.display = "flex";
             detalhesProdutos.innerHTML = ''
             let detalhes = document.createElement('p');
@@ -139,6 +145,7 @@ function buscarProdutos(categoria) {
             carrinho.innerHTML = "ADICIONAR NO CARRINHO"
             carrinho.id = "botaoCompra"
             detalhes.textContent = information[index].description;
+            priceModal.id = "priceInModal"
             detalhes.id = "pInModal";
 
             close.addEventListener("click",(e)=>{

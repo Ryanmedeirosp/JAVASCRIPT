@@ -11,27 +11,32 @@ function listaProdutos() {
         let container = document.createElement('div')
         let name = document.createElement('h1')
         let price = document.createElement('h3')
-        products.appendChild(image)
-        products.appendChild(container)
+        let containerGeral = document.createElement('div')
+        products.appendChild(containerGeral)
+        containerGeral.appendChild(image)
+        containerGeral.appendChild(container)
         container.appendChild(name)
         container.appendChild(price)
         image.src = information[index].image;
 
-        if (information[index].title.length > 30) {
-            name.innerHTML = information[index].title.substring(0,30) + "..."
+        if (information[index].title.length > 25) {
+            name.innerHTML = information[index].title.substring(0,25) + "..."
+       
         }
         else{
-            name.innerHTML = information[index].title
+            name.innerHTML = information[index].title + " for man";
+            
         }
         
         price.innerHTML =  "R$ " + information[index].price.toFixed(2) 
+        containerGeral.id = "containergeral"
         container.id = "containerProduct"
         price.id = "priceProduct"
         image.id = "imageProduct"
         name.id = "nameProduct"
 
         image.addEventListener("click", (e) => {
-
+            cartModal.style.display = "none"
             modal.style.display = "flex";
             detalhesProdutos.innerHTML = ''
             let detalhes = document.createElement('p');
@@ -48,6 +53,7 @@ function listaProdutos() {
             carrinho.innerHTML = "ADICIONAR NO CARRINHO"
             carrinho.id = "botaoCompra"
             detalhes.textContent = information[index].description;
+            priceModal.id = "priceInModal"
             detalhes.id = "pInModal";
 
             close.addEventListener("click",(e)=>{
@@ -123,7 +129,7 @@ function listaProdutos() {
             })
         })
         container.addEventListener("click", (e) => {
-
+            cartModal.style.display = "none"
             modal.style.display = "flex";
             detalhesProdutos.innerHTML = ''
             let detalhes = document.createElement('p');
@@ -140,6 +146,7 @@ function listaProdutos() {
             carrinho.innerHTML = "ADICIONAR NO CARRINHO"
             carrinho.id = "botaoCompra"
             detalhes.textContent = information[index].description;
+            priceModal.id = "priceInModal"
             detalhes.id = "pInModal";
 
             close.addEventListener("click",(e)=>{

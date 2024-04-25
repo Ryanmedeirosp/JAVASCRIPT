@@ -25,8 +25,7 @@ function listarCategoria() {
     click.id = 'categoryName'
     click.addEventListener("click", (e) => {
         products.innerHTML = ''
-        products.style.height = "600px"
-        products.style.overflow = "auto"
+        products.style.height = "1300px"
         listaProdutos()
         
     })
