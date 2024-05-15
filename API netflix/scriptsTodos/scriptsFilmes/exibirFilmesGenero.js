@@ -1,16 +1,11 @@
-function exibirGenero() {
-    fetch('https://api.themoviedb.org/3/movie/'+ num +'/similar?language=pt-br&page=1', options)
-    .then(response => response.json())
-    .then(response => { 
-    let listaFilmesPopulares = response.results;
-    console.log(listaFilmesPopulares)
+function exibirFilmesGenero(divExibicao,listaFilmesPopulares) {
     for (let index = 0; index < listaFilmesPopulares.length; index++) {
         let divImagensPopular = document.createElement('div');
         let imagensPopular = document.createElement('img');
         let descricao = document.createElement('p');
         let botaoVerMais = document.createElement('button');
      
-        divFilmes.appendChild(divImagensPopular);
+        divExibicao.appendChild(divImagensPopular);
         divImagensPopular.appendChild(descricao);
         divImagensPopular.appendChild(botaoVerMais);
         divImagensPopular.appendChild(imagensPopular);
@@ -120,33 +115,10 @@ function exibirGenero() {
             descricao.textContent = listaFilmesPopulares[index].overview
           }
         })
-          
-      }
-      let divBotaoContator = document.createElement("div");
-
-      for (let index = 1; index < 10; index++) {
-       
-        let botaoContador = document.createElement("button");
-        navContador.appendChild(divBotaoContator);
-        divBotaoContator.id = 'divBotaoContador';
-        botaoContador.id = "botaoContador"
-        divBotaoContator.appendChild(botaoContador);
-        botaoContador.textContent = index;
-        botaoContador.addEventListener("click",(e)=>{
-            divFilmes.innerHTML = ""
-            
-            fetch('https://api.themoviedb.org/3/movie/'+ num +'/similar?language=pt-br&page='+ index, options)
-            .then(response => response.json())
-            .then(response => { 
-            let listaFilmesPopulares = response.results;
-            console.log(listaFilmesPopulares)
-            exibirFilmesGenero(divFilmes,listaFilmesPopulares)
-                
-})
-  .catch(err => console.error(err));
-        })
-      }
+    
+        
+        
+        
+   
+    }
 }
-
-)}
-

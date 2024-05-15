@@ -1,16 +1,11 @@
-function exibirGenero() {
-    fetch('https://api.themoviedb.org/3/movie/'+ num +'/similar?language=pt-br&page=1', options)
-    .then(response => response.json())
-    .then(response => { 
-    let listaFilmesPopulares = response.results;
-    console.log(listaFilmesPopulares)
+function exibirFilmesGenero(divExibicao,listaFilmesPopulares) {
     for (let index = 0; index < listaFilmesPopulares.length; index++) {
         let divImagensPopular = document.createElement('div');
         let imagensPopular = document.createElement('img');
         let descricao = document.createElement('p');
         let botaoVerMais = document.createElement('button');
      
-        divFilmes.appendChild(divImagensPopular);
+        divExibicao.appendChild(divImagensPopular);
         divImagensPopular.appendChild(descricao);
         divImagensPopular.appendChild(botaoVerMais);
         divImagensPopular.appendChild(imagensPopular);
@@ -25,7 +20,7 @@ function exibirGenero() {
           descricao.innerHTML = listaFilmesPopulares[index].overview.slice(0,200) + " ..."
         }
         else if(listaFilmesPopulares[index].overview.length == 0) {
-          descricao.innerHTML = "Este filme ainda não possui descrição..."
+          descricao.innerHTML = "Esta Série ainda não possui descrição traduzida..."
         }else{
           descricao.innerHTML = listaFilmesPopulares[index].overview
         }
@@ -41,7 +36,7 @@ function exibirGenero() {
         botaoVerMais.addEventListener("click",(e)=>{
           let id = listaFilmesPopulares[index].id
     
-          fetch('https://api.themoviedb.org/3/movie/'+ id +'/videos?language=en-us', options)
+          fetch('https://api.themoviedb.org/3/tv/'+ id +'/videos?language=en-US', options)
           .then(response => response.json())
           .then(response => {
             let listaVideo = response.results
@@ -76,7 +71,7 @@ function exibirGenero() {
     
           let tituloModal = document.createElement('p');
           divTrailer.appendChild(tituloModal);
-          tituloModal.textContent = listaFilmesPopulares[index].title;
+          tituloModal.textContent = listaFilmesPopulares[index].name;
           tituloModal.id = "tituloModal"
     
           let descricaoModal = document.createElement('p');
@@ -120,33 +115,10 @@ function exibirGenero() {
             descricao.textContent = listaFilmesPopulares[index].overview
           }
         })
-          
-      }
-      let divBotaoContator = document.createElement("div");
-
-      for (let index = 1; index < 10; index++) {
-       
-        let botaoContador = document.createElement("button");
-        navContador.appendChild(divBotaoContator);
-        divBotaoContator.id = 'divBotaoContador';
-        botaoContador.id = "botaoContador"
-        divBotaoContator.appendChild(botaoContador);
-        botaoContador.textContent = index;
-        botaoContador.addEventListener("click",(e)=>{
-            divFilmes.innerHTML = ""
-            
-            fetch('https://api.themoviedb.org/3/movie/'+ num +'/similar?language=pt-br&page='+ index, options)
-            .then(response => response.json())
-            .then(response => { 
-            let listaFilmesPopulares = response.results;
-            console.log(listaFilmesPopulares)
-            exibirFilmesGenero(divFilmes,listaFilmesPopulares)
-                
-})
-  .catch(err => console.error(err));
-        })
-      }
+        
+        
+        
+        
+   
+    }
 }
-
-)}
-

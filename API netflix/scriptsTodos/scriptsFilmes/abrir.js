@@ -1,16 +1,11 @@
-function exibirGenero() {
-    fetch('https://api.themoviedb.org/3/movie/'+ num +'/similar?language=pt-br&page=1', options)
-    .then(response => response.json())
-    .then(response => { 
-    let listaFilmesPopulares = response.results;
-    console.log(listaFilmesPopulares)
+function abrir(divExibicao, listaFilmesPopulares){
     for (let index = 0; index < listaFilmesPopulares.length; index++) {
         let divImagensPopular = document.createElement('div');
         let imagensPopular = document.createElement('img');
         let descricao = document.createElement('p');
         let botaoVerMais = document.createElement('button');
      
-        divFilmes.appendChild(divImagensPopular);
+        divExibicao.appendChild(divImagensPopular);
         divImagensPopular.appendChild(descricao);
         divImagensPopular.appendChild(botaoVerMais);
         divImagensPopular.appendChild(imagensPopular);
@@ -41,16 +36,16 @@ function exibirGenero() {
         botaoVerMais.addEventListener("click",(e)=>{
           let id = listaFilmesPopulares[index].id
     
-          fetch('https://api.themoviedb.org/3/movie/'+ id +'/videos?language=en-us', options)
+          fetch('https://api.themoviedb.org/3/movie/'+ id +'/videos?language=pt-br', options)
           .then(response => response.json())
           .then(response => {
             let listaVideo = response.results
             console.log(listaVideo)
-           
+            let url = ""
             let iframe = document.createElement('iframe')
             
             if (listaVideo.length > 0) {
-              let url = "http://www.youtube.com/embed/" + listaVideo[0].key
+              url = "http://www.youtube.com/embed/" + listaVideo[0].key
               console.log(url)
               iframe.src = url
            
@@ -133,20 +128,16 @@ function exibirGenero() {
         divBotaoContator.appendChild(botaoContador);
         botaoContador.textContent = index;
         botaoContador.addEventListener("click",(e)=>{
-            divFilmes.innerHTML = ""
-            
-            fetch('https://api.themoviedb.org/3/movie/'+ num +'/similar?language=pt-br&page='+ index, options)
+            divExibicao.innerHTML = ""
+            divBotaoContator.innerHTML = ""
+            fetch('https://api.themoviedb.org/3/movie/popular?language=pt-BR&page='+ index, options)
             .then(response => response.json())
             .then(response => { 
             let listaFilmesPopulares = response.results;
             console.log(listaFilmesPopulares)
-            exibirFilmesGenero(divFilmes,listaFilmesPopulares)
-                
+            abrir(divFilmes,listaFilmesPopulares)
 })
   .catch(err => console.error(err));
         })
       }
 }
-
-)}
-

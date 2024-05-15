@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="../estiloTodos/estiloFilmes/header.css">
     <link rel="stylesheet" href="../estiloTodos/estiloFilmes/main.css">
     <script src="../scriptsTodos/scriptsFilmes/exibicao.js" defer></script>
-    <script src="../scriptsTodos/scriptsFilmes/genero.js" defer></script>
+    <script src="../scriptsTodos/scriptsFilmes/abrir.js" defer></script>
+    <script src="../scriptsTodos/scriptsFilmes/exibirFilmesGenero.js" defer></script>
     <script src="../scriptsTodos/scriptsFilmes/bibliotecahtml.js" defer></script>
+    
    
     <title>Filmes com filtro</title>
 </head>
@@ -23,7 +25,7 @@
             <nav>
                 <button class="botaoMenu" ><a href="index.html">Inicio</a></button>
                 <button class="botaoMenu" ><a href="populares.html">Populares</a></button>
-                <button class="botaoMenu" ><a href="filmes.html">Filmes</a></button>
+                <button class="botaoMenu" ><a href="filmes.html" id="filmesColor">Filmes</a></button>
                 <button class="botaoMenu" ><a href="series.html">Séries</a></button>
 
             </nav>
@@ -35,8 +37,22 @@
         <div id="notificacao">
             <img src="../imagens/notificacao.png" alt="noticação">
         </div>
+       
     </header>
-    <main>
+    <main id="main">
+        <nav id="navFilmes">
+            <button class="buttonNav" id="buttonComedia">Comédia</button>
+            <button class="buttonNav" id="buttonAventura">Aventura</button>
+            <button class="buttonNav" id="buttonAcao">Ação</button>
+            <button class="buttonNav" id="buttonRomance">Romance</button>
+        </nav>
+       
+        <div id="divFilmes">
+            
+        </div>
+        <div id="navContador">
+
+        </div>
 
     </main>
     <footer>

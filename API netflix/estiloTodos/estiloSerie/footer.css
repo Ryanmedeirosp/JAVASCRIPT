@@ -3,6 +3,7 @@ footer{
     flex-direction: column;
 }
 .rodape{
+    z-index: 1;
     color: white;
     height: 80px;
     margin: 20px;
@@ -17,6 +18,7 @@ footer{
 }
 #divLogoRedesSociais{
     display: flex;
+    z-index: 1;
 }
 .logoFooter{
     width: 100px;

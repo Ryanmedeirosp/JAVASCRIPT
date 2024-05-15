@@ -14,7 +14,6 @@ fetch('https://api.themoviedb.org/3/movie/popular?language=pt-BR&page=1', option
 .then(response => response.json())
 .then(response => { 
     let listaFilmesPopulares = response.results;
-    console.log(listaFilmesPopulares)
     exibicao(divFilmes,listaFilmesPopulares)
 })
   .catch(err => console.error(err));

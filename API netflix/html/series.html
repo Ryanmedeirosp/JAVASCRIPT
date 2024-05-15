@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="../estiloTodos/estiloSerie/footer.css">
     <link rel="stylesheet" href="../estiloTodos/estiloSerie/header.css">
     <link rel="stylesheet" href="../estiloTodos/estiloSerie/main.css">
+    <script src="../scriptsTodos/scriptsSeries/pages.js" defer></script>
     <script src="../scriptsTodos/scriptsSeries/genero.js" defer></script>
     <script src="../scriptsTodos/scriptsSeries/exibicao.js" defer></script>
     <script src="../scriptsTodos/scriptsSeries/bibliotecaHtml.js" defer></script>
+    
+    
     
     <title>Série</title>
 </head>
@@ -25,7 +28,7 @@
                     <button class="botaoMenu" ><a href="index.html">Inicio</a></button>
                     <button class="botaoMenu" ><a href="populares.html">Populares</a></button>
                     <button class="botaoMenu" ><a href="filmes.html">Filmes</a></button>
-                    <button class="botaoMenu" ><a href="series.html">Séries</a></button>
+                    <button class="botaoMenu" ><a href="series.html" id="seriesColor">Séries</a></button>
     
                 </nav>
             </div>
@@ -38,9 +41,20 @@
             </div>
         </header>
         <main id="main">
-            <div id="divFilmes">
+            <nav id="navFilmes">
+                <button class="buttonNav" id="buttonComedia">Comédia</button>
+                <button class="buttonNav" id="buttonFantasia">Sci-Fi & Fantasia</button>
+                <button class="buttonNav" id="buttonDrama">Drama</button>
+                <button class="buttonNav" id="buttonFaroeste">Faroeste</button>
+            </nav>
+           
+            <div id="divSeries">
+                
+            </div>
+            <div id="navContador">
     
             </div>
+    
         </main>
         <footer>
             <div id="divLogoRedesSociais">
