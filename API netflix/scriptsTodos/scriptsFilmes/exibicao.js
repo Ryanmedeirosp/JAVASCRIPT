@@ -16,6 +16,7 @@ function exibirGenero() {
         divImagensPopular.appendChild(imagensPopular);
     
         imagensPopular.src ="https://image.tmdb.org/t/p/original/" + listaFilmesPopulares[index].poster_path;
+        imagensPopular.alt = "Este título não possui imagem de apresentação"
         divImagensPopular.id = "divImagensPopular";
         imagensPopular.id = "imagensPopular";
         descricao.id = "descricao";
@@ -36,6 +37,7 @@ function exibirGenero() {
         })
         divImagensPopular.addEventListener('mouseout',(e)=>{
           imagensPopular.src ="https://image.tmdb.org/t/p/original/" + listaFilmesPopulares[index].poster_path;
+          imagensPopular.alt = "Este título não possui imagem de apresentação"
   
         })
         botaoVerMais.addEventListener("click",(e)=>{
@@ -83,6 +85,9 @@ function exibirGenero() {
           divTrailer.appendChild(descricaoModal);
           descricaoModal.textContent = descricao.textContent = listaFilmesPopulares[index].overview;
           descricaoModal.id= "descricaoModal"
+          if(listaFilmesPopulares[index].overview.length == 0) {
+            descricaoModal.innerHTML = "Este Filme ainda não possui descrição traduzida..."
+          }
           
           divTrailer.appendChild(iframe)
           
@@ -91,6 +96,7 @@ function exibirGenero() {
           divImagemModal.appendChild(imagemModal);
           imagemModal.src ="https://image.tmdb.org/t/p/original/" + listaFilmesPopulares[index].poster_path;
           imagemModal.id = "imagemModal"
+          imagemModal.alt = "Este título não possui imagem de apresentação"
     
           let avaliacaoModal = document.createElement('p');
           divImagemModal.appendChild(avaliacaoModal);
